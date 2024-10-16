@@ -3,14 +3,13 @@ import 'package:dartz/dartz.dart';
 
 abstract class CategoryFirebaseService {
 
-  Future<Either> getCategories();
+  Future<Either<String, List<Map<String, dynamic>>>> getCategories();
 }
 
 class CategoryFirebaseServiceImpl extends CategoryFirebaseService {
 
-  
   @override
-  Future < Either > getCategories() async {
+  Future < Either<String, List<Map<String, dynamic>>>> getCategories() async {
     try {
       var categories = await FirebaseFirestore.instance.collection('Categories').get();
       return Right(

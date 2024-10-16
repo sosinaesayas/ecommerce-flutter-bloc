@@ -57,6 +57,8 @@ class Ages extends StatelessWidget {
             style: const TextStyle(
               fontSize: 18
             ),
+            // ages[index].data()['value'] ?? 'N/A',
+            // style: const TextStyle(fontSize: 18),
           ),
         );
       },
